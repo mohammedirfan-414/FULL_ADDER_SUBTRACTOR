@@ -38,18 +38,75 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+<img width="566" height="512" alt="image" src="https://github.com/user-attachments/assets/4c0c13a8-aeb8-4d53-9837-58ca407006b4" />
+
+**FULL SUBRACTOR**
+
+<img width="572" height="516" alt="image" src="https://github.com/user-attachments/assets/2aa1fb99-9e21-4753-b2bb-e43175e32fd4" />
+
+
 **Procedure**
 
-Write the detailed procedure here
+Type the program in Quartus software.
+
+Compile and run the program.
+
+Generate the RTL schematic and save the logic diagram.
+
+Create nodes for inputs and outputs to generate the timing diagram.
+
+For different input combinations generate the timing diagram
+
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Program to design a full adder and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+
+**FULL ADDER**
+
+module exp4(df,bo,a,b,bin);
+output df;
+output bo;
+input a;
+input b;
+input bin;
+wire w1,w2,w3;
+assign w1=a^b;
+assign w2=(~a&b);
+assign w3=(~w1&bin);
+assign df=w1^bin;
+assign bo=w2|w3;
+endmodule
+
+**FULL SUBRACTOR**
+
+module full_subtractor(diff, borrow, a, b, bin);
+  output diff;
+  output borrow;
+  input a;
+  input b;
+  input bin;
+  assign diff = a ^ b ^ bin;
+  assign borrow = (~a & b) | (~(a ^ b) & bin);
+endmodule 
+
 
 **RTL Schematic**
 
+FULL ADDER 
+<img width="1177" height="744" alt="image" src="https://github.com/user-attachments/assets/4208d47a-aaa7-49b6-ab8a-547cd19fef8d" />
+
+FULL SBRACTOR
+
+<img width="1351" height="542" alt="image" src="https://github.com/user-attachments/assets/e1da0629-a45b-446a-97f8-1a70c30eb8d8" />
+
+
 **Output Timing Waveform**
+FULL ADDER
+<img width="1920" height="1201" alt="image" src="https://github.com/user-attachments/assets/b8302d08-fdf7-4358-80b4-b97e3d2b39d0" />
+
+FULL SUBRACTOR
+<img width="1921" height="1201" alt="image" src="https://github.com/user-attachments/assets/d3a4e58d-a778-49ae-bc0f-a48c5a21228b" />
 
 **Result:**
 

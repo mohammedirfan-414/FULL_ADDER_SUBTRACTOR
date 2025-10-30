@@ -66,8 +66,8 @@ For different input combinations generate the timing diagram.
 **Program:**
 ```
 Program to design a full adder and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
-Developed by: KABELAN G K
-RegisterNumber: 24900985
+Developed by:h mohammed irfan
+RegisterNumber: 25006317
 ```
 **Full Adder**
 
